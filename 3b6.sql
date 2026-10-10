@@ -16,7 +16,6 @@ recursive_calendar AS (
         date_bounds
 UNION ALL
 
--- Rekurzívny člen: pridávame 1 deň, kým nedosiahneme max_date
 SELECT 
     (calendar_date + INTERVAL '1 day')::DATE,
     max_date
